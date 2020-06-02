@@ -29,7 +29,7 @@ foreach($data as $i){
         array_push($r, $i);
     }
 }
-
+//Filtros por Ciudad y tipo según búsqueda
 $result = array();
 if(!empty($ciudad) && !empty($tipo)){
     foreach($r as $x){
