@@ -9,7 +9,7 @@ $precio = htmlspecialchars($_GET ['precio']);
 
 $posi =strpos($precio,';');
 $precioMenor= substr($precio,0, $posi);
-$PrecioMayor= substr($precio, $posi+1);
+$precioMayor= substr($precio, $posi+1);
 
 //Abrimos base de datos para consultar información
 
@@ -25,7 +25,7 @@ foreach($data as $i){
     $price = substr($price,strpos($price,'$')+1);
     $m = strpos($price,',');
     $price = substr($price,0,$m).substr($price,$m+1);
-    if ($price>=$precioMenor && $price <=$PrecioMayor) {
+    if ($price>=$precioMenor && $price <=$precioMayor) {
         array_push($r, $i);
     }
 }
